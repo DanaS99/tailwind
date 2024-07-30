@@ -1,0 +1,85 @@
+.popup-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);  /* Darker background for better contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-form-container {
+  background: #fff;  /* White background for the form */
+  padding: 20px;
+  border-radius: 10px;  /* Slightly larger radius for a softer look */
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);  /* Slightly stronger shadow for depth */
+  position: relative;
+  animation: fadeIn 0.3s ease-out;  /* Smooth fade-in animation */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;  /* Darker label color for better readability */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;  /* Larger padding for better user experience */
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background: #f8f8f8;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: #3498db;  /* Highlight border on focus */
+}
+
+.submit-btn {
+  background: #333;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: #555;  /* Slightly lighter background on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
